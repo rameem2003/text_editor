@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Editor (Alpha)</title>
+
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- local css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="editMode()">
+    
+
+    <section id="app_body">
+        <div class="menu">
+            <div class="font_family">
+                <select name="" onchange="fontFormate('fontName', this.value);">
+                    <option value="Arial">Arial</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                    <option value="Vardana">Vardana</option>
+                    <option value="Tahoma">Tahoma</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Courier">Courier</option>
+                </select>
+            </div>
+
+            <div class="font_size">
+                <select name="" onchange="fontFormate('fontSize', this.value);">
+                    <option value="2">2</option>
+                    <option value="4">4</option>
+                    <option value="6">6</option>
+                    <option value="8">8</option>
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="30">30</option>
+                    <option value="40">40</option>
+                    <option value="50">50</option>
+                </select>
+            </div>
+
+
+            <div class="formate">
+                <button id="boldBtn" onclick="editCommand('bold')" title="Bold"><i class="fa-solid fa-bold"></i></button>
+
+
+                <button id="italicBtn" onclick="editCommand('italic')" title="Italic"><i class="fa-solid fa-italic"></i></button>
+
+
+                <button id="underlineBtn" onclick="editCommand('underline')" title="Underline"><i class="fa-solid fa-underline"></i></button>
+            </div>
+
+            <div class="align">
+                <button id="leftAlign" onclick="editCommand('justifyLeft')" title="Align Left"><i class="fa-solid fa-align-left"></i></button>
+
+
+                <button id="centerAlign" onclick="editCommand('justifyCenter')"  title="Align Right"><i class="fa-solid fa-align-center"></i></button>
+
+
+                <button id="rightAlign" onclick="editCommand('justifyRight')"  title="Align Center"><i class="fa-solid fa-align-right"></i></button>
+
+
+                <button id="justifyAlign" onclick="editCommand('justifyFull')"  title="Align Justify"><i class="fa-solid fa-align-justify"></i></button>
+            </div>
+        </div>
+        
+        <iframe name="editor_area"></iframe>
+
+
+    </section>
+
+
+    <script>
+
+        var fontFamily = document.getElementById("fontFamily");
+        var fontSize = document.getElementById("fontSize");
+        var edit = document.getElementById("edit");
+        
+
+        function editMode(){
+            editor_area.document.designMode = "On";
+        }
+
+        function editCommand(command){
+            editor_area.document.execCommand(command, false, null);
+        }
+
+        function fontFormate(command, arg){
+            editor_area.document.execCommand(command, false, arg);
+        }
+
+        
+    </script>
+
+</body>
+</html>
