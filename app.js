@@ -8,9 +8,9 @@ function editMode(){
 }
 
 function editCommand(command){
-    editor_area.document.execCommand(command, false, null);
+    document.execCommand(command, false, null);
 }
 
 function fontFormate(command, arg){
-    editor_area.document.execCommand(command, false, arg);
+    document.execCommand(command, false, arg);
 }

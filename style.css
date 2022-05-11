@@ -17,7 +17,35 @@ body{
     padding: 30px 20px;
     border-radius: 10px;
     background-color: #ddd;
-    min-width: 80%;
+    width: 80%;
+    position: relative;
+}
+
+#app_body header{
+    position: absolute;
+    top: -33px;
+    left: 21px;
+    padding: 20px 10px;
+    background-color: white;
+    border-radius: 8px;
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+}
+
+#app_body header h2,p{
+    display: inline-block;
+}
+
+#app_body header h2 > sup{
+    font-size: 13px;
+    background-color: yellow;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+#app_body header p{
+    margin-left: 2rem;
+    font-style: italic;
 }
 
 #app_body .menu{
@@ -26,6 +54,7 @@ body{
     align-items: center;
     padding: 20px;
     border-radius: 10px;
+    margin-top: 2rem;
 }
 
 #app_body .menu select{
@@ -65,9 +94,9 @@ button:hover{
 }
 
 
-#app_body iframe{
+#app_body .frame{
     width: 100%;
-    height: 500px;
+    height: 450px;
     background-color: white;
     margin-top: 2rem;
     padding: 8px;
