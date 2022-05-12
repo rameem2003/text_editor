@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Text Editor (Alpha)</title>
+    <title>WebPad :: A light weight web text editor</title>
 
     <!-- font awesome cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -25,7 +25,7 @@
     <section id="app_body">
 
 
-        <header><h2>WebPad <sup>Alpha 0.1</sup></h2> <p>A light weight web text editor</p></header>
+        <header><h2>WebPad <sup>Beta</sup></h2> <p>A light weight web text editor</p></header>
 
         <div class="menu">
             <div class="font_family">
@@ -55,6 +55,11 @@
 
 
             <div class="formate">
+                <button id="supBtn" onclick="editCommand('superscript')" title="Superscript"><i class="fa-solid fa-superscript"></i></button>
+
+
+                <button id="subBtn" onclick="editCommand('subscript')" title="Subscript"><i class="fa-solid fa-subscript"></i></button>
+
                 <button id="boldBtn" onclick="editCommand('bold')" title="Bold"><i class="fa-solid fa-bold"></i></button>
 
 
@@ -81,11 +86,23 @@
 
                 <button id="justifyAlign" onclick="editCommand('justifyFull')"  title="Align Justify"><i class="fa-solid fa-align-justify"></i></button>
             </div>
+
+
+            <div class="link">
+                <button id="link" onclick="editCommand('createLink', prompt('Enter a url', 'http://'))" title="Add link"><i class="fa-solid fa-link"></i></button>
+
+
+                <button id="unlink" onclick="editCommand('unlink')"  title="Remove link"><i class="fa-solid fa-unlink"></i></button>
+            </div>
         </div>
         
         <div name="editor_area" class="frame" contenteditable="true"></div>
 
     </section>
+
+    <footer>
+        <p>Developer Mahmood Hassan Rameem</p>
+    </footer>
 
 
     <!-- local js -->
