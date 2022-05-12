@@ -1,4 +1,4 @@
-# WebPad text editor (Alpha 0.1)
+# WebPad text editor (Beta)
 ## Developer: Mahmood Hassan Rameem
 ## _Studing Diploma Engineering_
 ## _Computer Technology_
@@ -16,6 +16,7 @@ https://rameem2003.github.io/rameem.me
 
 ### To visit this site: 
 ```
+https://rameem2003.github.io/text_editor/
 
 ```
 
